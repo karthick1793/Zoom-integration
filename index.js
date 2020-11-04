@@ -1,9 +1,11 @@
-ZoomMtg.setZoomJSLib('https://source.zoom.us/1.8.1/lib', '/av'); 
+ZoomMtg.preLoadWasm();
+ZoomMtg.prepareJssdk();
+ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.8.1/lib', '/av'); 
 
 const zoomMeeting = document.getElementById("zmmtg-root");
 
-var signature='TEJTS0ZUQVVUbDIwQmJEdms1dzVIdy44NzE2NTU3ODExMi4xNjA0MzkxODk0MDAwLjEuQnhtLzlzbWpMM1pQai9PQk5nMXYvSUNoM0I4aWNRQUJQYlJlODdYZmFFaz0';
-var meetingNumber='87165578112';
+var signature='TEJTS0ZUQVVUbDIwQmJEdms1dzVIdy44OTcwNjcyNDk1Ni4xNjA0NDU5NTgyMDAwLjEuTml5cDhtcEJPTkh5RFE3NkZEVytsVGZKUlUxQkVnU2FwT3pYbWFCZnpLVT0';
+var meetingNumber='89706724956';
 var userName='karthickraja';
 var apiKey='LBSKFTAUTl20BbDvk5w5Hw';
 var userEmail='karthickraja@macappstudio.com'
@@ -22,13 +24,12 @@ const meetConfig = {
 
 // prepare required files
 //ZoomMtg.setZoomJSLib('https://source.zoom.us/1.8.1/lib', '/av');
-ZoomMtg.preLoadWasm();
-ZoomMtg.prepareJssdk();
 
-function startLive(){
-    debugger;
-    getSignature(meetConfig);
-}
+
+// function startLive(){
+//     debugger;
+//     getSignature(meetConfig);
+// }
 getSignature(meetConfig);
 function getSignature(meetConfig) {
 	// make a request for a signature
